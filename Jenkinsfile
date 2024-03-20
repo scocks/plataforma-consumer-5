@@ -16,11 +16,6 @@ pipeline {
         }
     }
     stages {
-        stage('Clone Repo') {
-            steps {
-                git (url: "git@github.com:scocks/plataforma-consumer-4.git", credentialsId: "scocks", branch: "main")
-            }
-        }
         stage('Generate Properties') {
             steps {
                 container('jdk17') {                    
